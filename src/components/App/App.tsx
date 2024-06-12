@@ -1,3 +1,5 @@
+import Svg from "@assets/svgs/test.svg";
+
 import styles from "./App.module.css";
 
 
@@ -6,7 +8,7 @@ export default function App() {
 
     return (
         <div>
-            Hello world
+            <Svg />
         </div>
     );
 }

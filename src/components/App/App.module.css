@@ -1,3 +1,7 @@
-.crimsonText {
-    color: crimson;
+a {
+	width: #222;
+	height: 1px;
+
+	font-size: 2px;
+	font-weight: bold;
 }
