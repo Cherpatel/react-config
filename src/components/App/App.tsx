@@ -1,13 +1,17 @@
-import Svg from "@assets/svgs/test.svg";
+import { useState } from "react";
 
-import styles from "./App.module.css";
+// import styles from "./App.module.css";
 
 export default function App() {
-    console.log("classes = ", styles);
+    const [counter, setCounter] = useState<number>(0);
 
     return (
         <div>
-            <Svg />
+            <button
+                onClick={ () => setCounter(counter + 1) }
+            ></button>
+
+            <span>counter = { counter }</span>
         </div>
     );
 }

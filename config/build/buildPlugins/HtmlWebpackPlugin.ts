@@ -2,8 +2,16 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 import type { BuildOptions } from "@config/build/types/types";
 
-export function HtmlWebpackPluginInstance(options: BuildOptions) {
-    const { paths: { html } } = options;
+export function htmlWebpackPluginInstance(options: BuildOptions) {
+    const {
+        paths: {
+            favicon,
+            html,
+        },
+    } = options;
 
-    return new HtmlWebpackPlugin({ template: html });
+    return new HtmlWebpackPlugin({
+        favicon,
+        template: html,
+    });
 }

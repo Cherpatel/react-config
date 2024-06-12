@@ -12,7 +12,7 @@ export default function buildLoaders(options: BuildOptions): ModuleOptions["rule
         fontsLoader(),
         svgrLoader(),
         assetsLoader(),
-        tsLoader(),
+        tsLoader(options),
         scssLoader(options),
     ];
 }

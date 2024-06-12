@@ -5,6 +5,7 @@ export type BuildPaths = {
     components: string;
     assets: string;
     config: string;
+    favicon: string;
 }
 
 export type BuildMode = "production" | "development";

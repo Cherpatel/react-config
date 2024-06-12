@@ -1,5 +1,7 @@
-import { HtmlWebpackPluginInstance } from "./HtmlWebpackPlugin";
-import { MiniCssExtractPluginInstance } from "./MiniCssExtractPlugin";
+import { forkTsCheckerWebpackPluginInstance } from "./forkTsCheckerWebpackPlugin";
+import { htmlWebpackPluginInstance } from "./htmlWebpackPlugin";
+import { miniCssExtractPluginInstance } from "./miniCssExtractPlugin";
+import { reactRefreshWebpackPluginInstance } from "./reactRefreshWebpackPlugin";
 
 import type { BuildOptions } from "@config/build/types/types";
 import type { Configuration } from "webpack";
@@ -11,19 +13,22 @@ export default function buildPlugins(options: BuildOptions): Configuration["plug
     } = options;
 
     const plugins: Configuration["plugins"] = [
-        HtmlWebpackPluginInstance(options),
+        htmlWebpackPluginInstance(options),
     ];
 
     if (isProd) {
         const prodPlugins = [
-            MiniCssExtractPluginInstance,
+            miniCssExtractPluginInstance(),
         ];
 
         plugins.push(...prodPlugins);
     }
 
     if (isDev) {
-        const devPlugins = [];
+        const devPlugins = [
+            forkTsCheckerWebpackPluginInstance(),
+            reactRefreshWebpackPluginInstance(),
+        ];
 
         plugins.push(...devPlugins);
     }
