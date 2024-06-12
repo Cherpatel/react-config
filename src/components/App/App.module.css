@@ -4,4 +4,6 @@ a {
 
 	font-size: 2px;
 	font-weight: bold;
+
+	mask-clip: content-box;
 }

@@ -6,6 +6,8 @@ const propertiesOrder = propertyGroups.map((properties) => ({
     properties,
 }));
 
+console.log(propertiesOrder);
+
 module.exports = {
     extends: [
         "stylelint-config-standard-scss",
@@ -19,6 +21,7 @@ module.exports = {
         "order/properties-order": [
             propertiesOrder,
             {
+                emptyLineBeforeUnspecified: "always",
                 severity: "error",
                 unspecified: "bottomAlphabetical",
             },

@@ -25,6 +25,7 @@ export function scssLoader(options: BuildOptions): RuleSetRule {
         use: [
             isProd ? MiniCssExtractPlugin.loader : "style-loader",
             cssLoader,
+            "postcss-loader",
             "sass-loader",
         ],
     };
