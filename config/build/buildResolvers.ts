@@ -1,7 +1,6 @@
 import type { BuildOptions } from "./types/types";
 import type { Configuration } from "webpack";
 
-
 export default function buildResolvers(options: BuildOptions): Configuration["resolve"] {
     const {
         paths: {

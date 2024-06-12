@@ -6,7 +6,6 @@ import buildResolvers from "./buildResolvers";
 import type { BuildOptions } from "./types/types";
 import type webpack from "webpack";
 
-
 export default function webpackBuild(options: BuildOptions): webpack.Configuration {
     const {
         isDev,

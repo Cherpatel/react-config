@@ -1,7 +1,10 @@
 a {
+	content: '2313';
+
 	width: #222;
 	height: 1px;
 
+	font-family: Arial;
 	font-size: 2px;
 	font-weight: bold;
 

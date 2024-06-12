@@ -3,7 +3,6 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import type { BuildOptions } from "@config/build/types/types";
 import type { RuleSetRule } from "webpack";
 
-
 export function scssLoader(options: BuildOptions): RuleSetRule {
     const { isProd } = options;
 

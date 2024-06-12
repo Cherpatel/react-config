@@ -1,6 +1,5 @@
 import type { RuleSetRule } from "webpack";
 
-
 export function svgrLoader(): RuleSetRule {
     return {
         issuer: /\.[j|t]sx/i,
