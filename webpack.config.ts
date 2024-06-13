@@ -4,7 +4,6 @@ import buildWebpack from "./config/build/buildWebpack";
 
 import type { BuildPaths, BuildMode } from "./config/build/types/types";
 
-
 type Env = {
     mode: BuildMode;
     port: number;
