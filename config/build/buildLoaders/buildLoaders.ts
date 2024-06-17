@@ -1,4 +1,5 @@
-import { assetsLoader } from "./assetsLoader";
+import { assetsLoader } from "@config/build/buildLoaders/assetsLoader";
+
 import { fontsLoader } from "./fontsLoader";
 import { scssLoader } from "./scssLoader";
 import { svgrLoader } from "./svgrLoader";

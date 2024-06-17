@@ -97,6 +97,8 @@
                 "count": 1
             }
         ],
+        "import/first": "error",
+        "import/exports-last": "error",
         "import/order": [
             "error",
             {
@@ -108,7 +110,6 @@
                     "external",
                     "internal",
                     "sibling",
-                    "parent",
                     "index",
                     "type"
                 ],
@@ -116,10 +117,27 @@
                 "pathGroups": [
                     {
                         "group": "internal",
+                        "pattern": "@config/**",
+                        "position": "after"
+                    },
+                    {
+                        "group": "internal",
+                        "pattern": "@assets/**",
+                        "position": "after"
+                    },
+                    {
+                        "group": "sibling",
                         "pattern": "@components/**",
                         "position": "after"
+                    },
+                    {
+                        "group": "type",
+                        "pattern": "**/*.{css,sass,scss}",
+                        "position": "after"
                     }
-                ]
+                ],
+                "distinctGroup": true,
+                "pathGroupsExcludedImportTypes": [ "type" ]
             }
         ],
         "indent": [
