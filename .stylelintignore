@@ -9,5 +9,6 @@
 *.woff2
 *.eot
 *.otf
+*.snap
 /node_modules/
 /build/

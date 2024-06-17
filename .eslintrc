@@ -191,7 +191,8 @@
                 "noSortAlphabetically": false,
                 "reservedFirst": true,
                 "shorthandFirst": true,
-                "shorthandLast": false
+                "shorthandLast": false,
+                "multiline": "last"
             }
         ],
         "react-hooks/exhaustive-deps": "warn",
@@ -203,7 +204,7 @@
         "sort-destructure-keys/sort-destructure-keys": [
             "error",
             {
-                "caseSensitive": false
+                "caseSensitive": true
             }
         ],
         "sort-keys-fix/sort-keys-fix": [
