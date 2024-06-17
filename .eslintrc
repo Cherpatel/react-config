@@ -111,6 +111,7 @@
                     "internal",
                     "sibling",
                     "index",
+                    "unknown",
                     "type"
                 ],
                 "newlines-between": "always",
@@ -132,7 +133,7 @@
                     },
                     {
                         "group": "type",
-                        "pattern": "**/*.{css,sass,scss}",
+                        "pattern": "./*.{css,sass,scss}",
                         "position": "after"
                     }
                 ],
