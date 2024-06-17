@@ -6,7 +6,7 @@ import type { RuleSetRule } from "webpack";
 export function scssLoader(options: BuildOptions): RuleSetRule {
     const { isProd } = options;
 
-    const cssLoader = {
+    const cssModuleLoader = {
         loader: "css-loader",
         options: {
             importLoaders: 1,
@@ -20,12 +20,25 @@ export function scssLoader(options: BuildOptions): RuleSetRule {
     };
 
     return {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-            isProd ? MiniCssExtractPlugin.loader : "style-loader",
-            cssLoader,
-            "postcss-loader",
-            "sass-loader",
+        oneOf: [
+            {
+                test: /\.module\.(css|scss)$/,
+                use: [
+                    isProd ? MiniCssExtractPlugin.loader : "style-loader",
+                    cssModuleLoader,
+                    "postcss-loader",
+                    "sass-loader",
+                ],
+            },
+            {
+                use: [
+                    isProd ? MiniCssExtractPlugin.loader : "style-loader",
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
+                ],
+            },
         ],
+        test: /\.(sa|sc|c)ss$/,
     };
 }
