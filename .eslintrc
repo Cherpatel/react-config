@@ -121,7 +121,7 @@
                         "position": "after"
                     },
                     {
-                        "group": "internal",
+                        "group": "sibling",
                         "pattern": "@assets/**",
                         "position": "after"
                     },
