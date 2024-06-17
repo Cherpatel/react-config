@@ -214,6 +214,16 @@
                 "multiline": "last"
             }
         ],
+        "react/jsx-curly-spacing": [
+            "error",
+            {
+                "when": "always",
+                "children": true,
+                "spacing": {
+                    "objectLiterals": "always"
+                }
+            }
+        ],
         "react-hooks/exhaustive-deps": "warn",
         "react-hooks/rules-of-hooks": "error",
         "semi": [
