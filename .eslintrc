@@ -104,8 +104,8 @@
                     "order": "asc"
                 },
                 "groups": [
-                    "external",
                     "builtin",
+                    "external",
                     "internal",
                     "sibling",
                     "parent",
@@ -115,9 +115,9 @@
                 "newlines-between": "always",
                 "pathGroups": [
                     {
-                        "group": "parent",
-                        "pattern": "@/**/**",
-                        "position": "before"
+                        "group": "internal",
+                        "pattern": "@components/**",
+                        "position": "after"
                     }
                 ]
             }
@@ -152,7 +152,7 @@
         "no-multiple-empty-lines": [
             "error",
             {
-                "max": 2,
+                "max": 1,
                 "maxBOF": 0,
                 "maxEOF": 0
             }

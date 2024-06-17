@@ -1,3 +1,5 @@
+import fs from "fs";
+
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 import type { BuildOptions } from "@config/build/types/types";
@@ -10,8 +12,10 @@ export function htmlWebpackPluginInstance(options: BuildOptions) {
         },
     } = options;
 
+    const isFaviconExists = fs.existsSync(favicon);
+
     return new HtmlWebpackPlugin({
-        favicon,
+        ...(isFaviconExists && { favicon }),
         template: html,
     });
 }
