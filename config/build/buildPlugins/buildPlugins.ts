@@ -8,18 +8,13 @@ import type { Configuration } from "webpack";
 
 export default function buildPlugins(options: BuildOptions): Configuration["plugins"] {
     const {
-        isDev,
-        isProd,
+        isDev, isProd,
     } = options;
 
-    const plugins: Configuration["plugins"] = [
-        htmlWebpackPluginInstance(options),
-    ];
+    const plugins: Configuration["plugins"] = [ htmlWebpackPluginInstance(options) ];
 
     if (isProd) {
-        const prodPlugins = [
-            miniCssExtractPluginInstance(),
-        ];
+        const prodPlugins = [ miniCssExtractPluginInstance() ];
 
         plugins.push(...prodPlugins);
     }

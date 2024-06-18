@@ -12,9 +12,7 @@ export function tsLoader(options: BuildOptions) {
             loader: "ts-loader",
             options: {
                 getCustomTransformers: () => ({
-                    before: [
-                        isDev && ReactRefreshTypescript(),
-                    ].filter(Boolean),
+                    before: [ isDev && ReactRefreshTypescript() ].filter(Boolean),
                 }),
                 transpileOnly: isDev,
             },

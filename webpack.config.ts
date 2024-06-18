@@ -7,7 +7,7 @@ import type { BuildPaths, BuildMode } from "./config/build/types/types";
 type Env = {
     mode: BuildMode;
     port: number;
-}
+};
 
 export default (env: Env) => {
     const {

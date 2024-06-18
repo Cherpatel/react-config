@@ -6,7 +6,7 @@ export type BuildPaths = {
     assets: string;
     config: string;
     favicon: string;
-}
+};
 
 export type BuildMode = "production" | "development";
 
@@ -16,4 +16,4 @@ export type BuildOptions = {
     paths: BuildPaths;
     isProd: boolean;
     isDev: boolean;
-}
+};
