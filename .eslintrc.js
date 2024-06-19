@@ -251,6 +251,7 @@ module.exports = {
         "@stylistic/type-named-tuple-spacing": [ "error" ],
         "@stylistic/wrap-iife": ["error", "inside"],
         "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
+        "@typescript-eslint/no-unused-vars": "warn",
         "@typescript-eslint/no-var-requires": "off",
         "import/exports-last": "error",
         "import/first": "error",
