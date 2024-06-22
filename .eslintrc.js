@@ -98,7 +98,12 @@ module.exports = {
         "@stylistic/jsx-closing-bracket-location": "error",
         "@stylistic/jsx-closing-tag-location": "error",
         "@stylistic/jsx-curly-brace-presence": ["error", "never"],
-        "@stylistic/jsx-curly-newline": ["error", "consistent"],
+        "@stylistic/jsx-curly-newline": [
+            "error", {
+                multiline: "require",
+                singleline: "consistent",
+            },
+        ],
         "@stylistic/jsx-curly-spacing": [
             2, {
                 attributes: { allowMultiline: true },
@@ -256,6 +261,7 @@ module.exports = {
         "import/exports-last": "error",
         "import/first": "error",
         "import/newline-after-import": ["error", { count: 1 }],
+        "import/no-duplicates": "error",
         "import/order": [
             "error",
             {
@@ -268,7 +274,6 @@ module.exports = {
             },
         ],
         "no-console": ["warn", { allow: ["warn", "error"] }],
-        "no-duplicate-imports": "error",
         "no-restricted-imports": [
             "error", {
                 patterns: [
