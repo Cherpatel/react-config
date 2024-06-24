@@ -16,6 +16,7 @@ export function htmlWebpackPluginInstance(options: BuildOptions) {
 
     return new HtmlWebpackPlugin({
         ...(isFaviconExists && { favicon }),
+        publicPath: "/",
         template: html,
     });
 }
