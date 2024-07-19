@@ -123,7 +123,7 @@ module.exports = {
             },
         ],
         "@stylistic/jsx-newline": ["error", { prevent: true }],
-        "@stylistic/jsx-one-expression-per-line": ["error", { allow: "literal" }],
+        "@stylistic/jsx-one-expression-per-line": ["error", { allow: "single-line" }],
         "@stylistic/jsx-pascal-case": ["error", { allowNamespace: true }],
         "@stylistic/jsx-quotes": ["error", "prefer-double"],
         "@stylistic/jsx-sort-props": [
