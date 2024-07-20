@@ -1,11 +1,12 @@
 export type BuildPaths = {
-    html: string;
-    entry: string;
-    output: string;
-    components: string;
     assets: string;
+    components: string;
     config: string;
+    entry: string;
+    env: string;
     favicon: string;
+    html: string;
+    output: string;
 };
 
 export type BuildMode = "production" | "development";
