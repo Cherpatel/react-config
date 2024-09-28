@@ -7,6 +7,16 @@ const importOrderCustomGroups = [
     },
     {
         group: "sibling",
+        pattern: "@libs/**",
+        position: "after",
+    },
+    {
+        group: "sibling",
+        pattern: "@controllers/**",
+        position: "after",
+    },
+    {
+        group: "sibling",
         pattern: "@assets/**",
         position: "after",
     },

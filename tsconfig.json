@@ -10,8 +10,10 @@
         "baseUrl": "./",
         "paths": {
             "@components/*": ["src/components/*"],
+            "@controllers/*": ["src/controllers/*"],
             "@assets/*": ["src/assets/*"],
             "@config/*": ["config/*"],
+            "@libs/*": ["src/libs/*"],
         }
     },
     "ts-node": {
