@@ -11,6 +11,12 @@ module.exports = {
     plugins: [ "stylelint-order" ],
     rules: {
         "at-rule-empty-line-before": null,
+        "custom-property-pattern": [
+            "^[a-z]+[a-zA-Z0-9]*$",
+            {
+                message: "Custom property names should be in camelCase",
+            },
+        ],
         "declaration-empty-line-before": null,
         "font-family-no-missing-generic-family-keyword": null,
         "order/properties-order": [

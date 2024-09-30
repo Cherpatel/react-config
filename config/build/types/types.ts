@@ -9,6 +9,7 @@ export type BuildPaths = {
     html: string;
     output: string;
     libs: string;
+    styles: string;
 };
 
 export type BuildMode = "production" | "development";

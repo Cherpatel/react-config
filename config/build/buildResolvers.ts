@@ -9,6 +9,7 @@ export default function buildResolvers(options: BuildOptions): ResolveOptions {
             config,
             controllers,
             libs,
+            styles,
         },
     } = options;
 
@@ -19,6 +20,7 @@ export default function buildResolvers(options: BuildOptions): ResolveOptions {
             "@config": config,
             "@controllers": controllers,
             "@libs": libs,
+            "@styles": styles,
         },
         extensions: [".tsx", ".jsx", ".ts", ".js"],
     };
